@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style type="text/css">
+		.shooter {
+			width: 80px; 
+			position: absolute;
+			left: 700px; 	
+		}
+		.box {
+			background-image: url(game.png);
+			height: 1000px; 
+			background-size: 100% 100%;
+		}
+		.zombies {
+			width: 80px; 
+			position: absolute;
+			left: 1700px;
+			transition: 1s;
+		}
+	</style>
+</head>
+<body>	
+	
+	<div class="box" style="">
+		
+		<h5 style="position: absolute; left: 900px; top: 50px; color: white;">Score: <span class="score"></span></h5>
+
+		<!--ГОРОХИ-->
+	    <img class="shooter" src="peashooter.png"  style="top: 250px; ">		
+		<img class="shooter" src="peashooter.png"  style="top: 350px; ">	
+		<img class="shooter" src="peashooter.png"  style="top: 450px; ">	
+		<img class="shooter" src="peashooter.png"  style="top: 550px; ">
+		<img class="shooter" src="peashooter.png"  style="top: 650px; ">
+
+
+		<!--ЗОМБИ-->
+		<img class="zombies" src="zombie1.png" style="top: 220px">
+		<img class="zombies" src="zombie2.png" style="top: 320px">
+		<img class="zombies" src="zombie2.png" style="top: 420px">
+		<img class="zombies" src="zombie4.png" style="top: 520px">
+		<img class="zombies" src="zombie4.png" style="top: 620px">
+	</div>
+<script>
+	let zombies=document.querySelectorAll('.zombies')
+	let shooters=document.querySelectorAll('.shooter')
+	let left1=1700
+	let left2=1700
+	let left3=1700
+	let left4=1700
+	let left5=1700
+	let score=0
+	document.querySelector('.score').innerHTML=score
+
+	zombies[0].onclick=function(){
+		left1=left1-300
+		zombies[0].style.left=left1+"px"
+		if(left1<=700){
+			alert("горох съеден")
+			shooters[0].style.display="none"
+			score=score+15
+			document.querySelector('.score').innerHTML=score
+		}
+		if(score==75){
+			zombies[0].style.display="none"
+			zombies[1].style.display="none"
+			zombies[2].style.display="none"
+			zombies[3].style.display="none"
+			zombies[4].style.display="none"
+		}
+	}
+
+	zombies[1].onclick=function(){
+		left2=left2-300
+		zombies[1].style.left=left2+"px"
+		if(left2<=700){
+			alert("горох съеден")
+			shooters[1].style.display="none"
+			score=score+15
+			document.querySelector('.score').innerHTML=score
+		}
+		if(score==75){
+			zombies[0].style.display="none"
+			zombies[1].style.display="none"
+			zombies[2].style.display="none"
+			zombies[3].style.display="none"
+			zombies[4].style.display="none"
+		}
+	}
+	zombies[2].onclick=function(){
+		left3=left3-300
+		zombies[2].style.left=left3+"px"
+		if(left3<=700){
+			alert("горох съеден")
+			shooters[2].style.display="none"
+			score=score+15
+			document.querySelector('.score').innerHTML=score
+		}
+		if(score==75){
+			zombies[0].style.display="none"
+			zombies[1].style.display="none"
+			zombies[2].style.display="none"
+			zombies[3].style.display="none"
+			zombies[4].style.display="none"
+		}
+	}
+	zombies[3].onclick=function(){
+		left4=left4-300
+		zombies[3].style.left=left4+"px"
+		if(left4<=700){
+			alert("горох съеден")
+			shooters[3].style.display="none"
+			score=score+15
+			document.querySelector('.score').innerHTML=score
+		}
+		if(score==75){
+			zombies[0].style.display="none"
+			zombies[1].style.display="none"
+			zombies[2].style.display="none"
+			zombies[3].style.display="none"
+			zombies[4].style.display="none"
+		}
+	}
+	zombies[4].onclick=function(){
+		left5=left5-300
+		zombies[4].style.left=left5+"px"
+		if(left5<=700){
+			alert("горох съеден")
+			shooters[4].style.display="none"
+			score=score+15
+			document.querySelector('.score').innerHTML=score
+		}
+		if(score==75){
+			zombies[0].style.display="none"
+			zombies[1].style.display="none"
+			zombies[2].style.display="none"
+			zombies[3].style.display="none"
+			zombies[4].style.display="none"
+		}
+	}
+</script>
+</body>
+</html>
